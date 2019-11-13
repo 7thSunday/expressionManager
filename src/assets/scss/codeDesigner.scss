@@ -1,0 +1,37 @@
+#code-designer{
+  /deep/.vue-codemirror{
+    height:50%;
+    /deep/.CodeMirror{
+      height: 100%;
+    }
+  }
+  /deep/.CodeMirror-scroll{
+    width:100%;
+  }
+  .b {
+    height: calc(50% - 30px);
+    position: relative;
+    .control-bar {
+      height: 50px;
+      padding-top: 7px;
+    }
+    .support {
+      position: absolute;
+      top: 50px;
+      bottom: 0px;
+      width: 100%;
+      border: 1px solid #dfdfdf;
+      display: flex;
+      .support-tree {
+        width: 20%;
+        height: 100%;
+        overflow: auto;
+        border-right: 1px solid #dfdfdf;
+      }
+      .support-tips {
+        width: 80%;
+        padding: 10px;
+      }
+    }
+  }
+}

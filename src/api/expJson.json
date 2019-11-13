@@ -1,0 +1,340 @@
+[ {
+	"id" : "baseObjId",
+    "text" : "基本对象",
+    "domType": "root",
+	"state" : "closed",
+	"children" : [ {
+		"id" : "mathCal",
+        "text" : "算术运算",
+        "domType": "root",
+		"children" : [ {
+			"id" : "+",
+			"text" : "+(加或字符串连接)",
+			"decripHtml" : "+<br/>半角加号。两数值加、日期加时间片或两字符串连接。如：1+2结果等于：3；'ab'+'cd'结果等于：'abcd'；DateTime.Now+TimeSpan.FromDays(1)结果等于加了一天的日期，比如现在是：2011-1-1 8:0:0，则日期是：2011-1-2 8:0:0</li>"
+		}, {
+			"id" : "-",
+            "text" : "-(减)",
+            "decripHtml" : "<li>-<br/>半角减号。两数值减、两日期减得到时间片。如：1-2结果等于：-1；vsp=DateTime.Now-DateTime.Parse('2011-1-1')vsp.Hours结果等于两日期相减的时间片，比如现在是：2011-1-1 8:0:0，则上例中的时间片的小时数为：8</li>"
+		}, {
+			"id" : "*",
+            "text" : "*(数值乘)",
+            "decripHtml" : "<li>*<br/>半角星号。如：2.5*2结果等于：5</li>"
+		}, {
+			"id" : "/",
+            "text" : "/(数值除)",
+            "decripHtml" : "/<br/>半角/符。如：10/3结果等于：3.333333333333333"
+		}, {
+			"id" : "%",
+            "text" : "%(数值取余)",
+            "decripHtml" : "%<br/>半角百分号。两个数相除，取余数。如：10%3结果等于：1"
+		}, {
+			"id" : "=",
+            "text" : "=(赋值)",
+            "decripHtml" : "=<br/>半角等号。每个赋值表达式只允许给一个变量赋值。如：myName='张三'结果等于：'张三'"
+		} ]
+	}, {
+		"id" : "logicCompare",
+        "text" : "逻辑比较",
+        "domType": "root",
+		"children" : [ {
+			"id" : ">",
+            "text" : ">(大于比较)",
+            "decripHtml" : "><br/>半角大于号。如：10>2结果等于：true"
+		}, {
+			"id" : "<",
+            "text" : "<(小于比较)",
+            "decripHtml" : "<<br/>半角小于号。如：10<2结果等于：false"
+		}, {
+			"id" : "==",
+            "text" : "==(等于比较)",
+            "decripHtml" : "==<br/>两个半角等号，中间无空格。如：10==2结果等于：false"
+		}, {
+			"id" : "!=",
+            "text" : "!=(不等于比较)",
+            "decripHtml" : "!=<br/>半角感叹号加等号，中间无空格。如：10!=2结果等于：true"
+		}, {
+			"id" : ">=",
+            "text" : ">=(大于等于比较)",
+            "decripHtml" : ">=<br/>半角大于号加等号，中间无空格。如：10>=2结果等于：true"
+		}, {
+			"id" : "<=",
+            "text" : "<=(小于等于比较)",
+            "decripHtml" : "<=<br/>半角小于号加等号，中间无空格。如：10<=2结果等于：false"
+		}, {
+			"id" : "||",
+            "text" : "||(两条件至少一个成立)",
+            "decripHtml" : "||<br/>两个半角|符号。如：myAge=29myAge<20||myAge>60结果等于：false"
+		}, {
+			"id" : "&&",
+            "text" : "&&(两条件同时成立)",
+            "decripHtml" : "&&<br/>两个半角&符号。如：myAge=29myAge>20&&myAge<30结果等于：true"
+		} ]
+
+	}, {
+		"id" : "baseOper",
+        "text" : "基本操作对象",
+        "domType": "root",
+		"children" : [ {
+			"id" : "$.Y",
+            "text" : "$.Y 当前的四位年",
+            "decripHtml" : "$.Y<br/>当前时间的年份，四位有效数字。"
+		}, {
+			"id" : "$.y",
+            "text" : "$.y 当前的两位年",
+            "decripHtml" : "$.y<br/>当前时间的年份，两位有效数字。"
+		}, {
+			"id" : "$.M",
+            "text" : "$.M 当前的两位月，不够两位在前面补0",
+            "decripHtml" : "<br/>当前时间的月份，固定两位有效数字，不足高位补零。"
+		}, {
+			"id" : "$.m",
+            "text" : "$.m 当前的月",
+            "decripHtml" : "$.m<br/>当前时间的月份，如果是一月到九月，高位不会补零。"
+		}, {
+			"id" : "$.D",
+            "text" : "$.D 当前的两位日，不够两位在前面补0",
+            "decripHtml" : "$.D<br/>当前月份的日号值，固定两位有效数字，不足高位补零。"
+		}, {
+			"id" : "$.d",
+            "text" : "$.d 当前的日",
+            "decripHtml" : "$.d<br/>当前月份的日号值，如果是一号到九号，高位不会补零。"
+		}, {
+			"id" : "$.nowStr()",
+            "text" : "$.nowStr() 当前时间的字符串",
+            "decripHtml" : "$.nowStr()<br/>当前时间，格式：yyyy-MM-dd HH:mm:ss"
+		}, {
+			"id" : "$.F",
+            "text" : "$.F 表单对象",
+            "decripHtml" : "$.F<br/>表单对象，用于访问表单数据。对应表单引擎接口“IFormService”（详细说明参见《iBase2.0[M0211]表单处理引擎.doc》）"
+		}, {
+			"id" : "$.F.getFieldValue()",
+            "text" : "$.F.getFieldValue(strFormDomainName) 取字段值",
+            "decripHtml" : "$.F.getFieldValue(String formDomainName)<br/>获取某个字段值。类型：Object，根据字段类型返回不同值类型，一般有：字符串、整数、小数、日期等。参数：formDomainName，字段唯一名。格式：“库表名$组名@RID.字段名>子表单字段”，如：JOB_A.FMJ、JOB_A$old.FMJ、JOB_A.F1>JOB_B@1df809ae-8a81-dc23-132038ae.SJ"
+		}, {
+			"id" : "$.F.getFormData()",
+            "text" : "$.F.getFormData() 取所有字段值，返回Map对象，key为字段名，Value为字段值",
+            "decripHtml" : "$.F.getFormData()<br/>获取表单所有字段名值对。类型：Map<String,Object>。"
+		}, {
+			"id" : "$.F.getBusinessno()",
+            "text" : "$.F.getBusinessno() 取本业务的业务受理号",
+            "decripHtml" : "$.F.getBusinessno()<br/>获取业务号"
+		}, {
+			"id" : "$.F.getFieldNames()",
+            "text" : "$.F.getFieldNames() 取所有字段名，返回List",
+            "decripHtml" : "$.F.getFieldNames()<br/>获取表单所有字段名。类型：List<String>。"
+		}, {
+			"id" : "$.print()",
+			"text" : "$.print() 输出内容到控制台",
+			"decripHtml" : "$.print()<voidbr/>将消息内容输出到控制台（浏览器使用console.log，服务器使用System.out.println并写入到<日志根目录>/scriptLog/{yyyy-MM-dd}.log文件）。类型：void。"
+		}, {
+			"id" : "$.parseDate()",
+			"text" : "$.parseDate() 将日期格式的值转换成日期值对象",
+			"decripHtml" : "$.parseDate()<br/>将日期格式的值转换成日期值对象。识别timestmap的整数、yyyy-MM-dd HH:mm:ss（包括/分隔符）、yyyy年MM月dd日 HH时mm分ss秒、Mon Jul 25 2017 04:05:23 GMT+0800、yyyyMMdd、yyyyMMddHHmmss。类型：日期。"
+		}, {
+			"id" : "$.N()",
+			"text" : "$.N() 获得指定分类的最大流水号值",
+			"decripHtml" : "$.N()<br/>仅在编号公式表达式中使用。其它表达式内，调用此方法将返回指定长度的0值。<br/>参数：<br/>numberLength【必须】：数字，指定生成编号的长度。<br/>type【可选】：字符串，用于生成最终编号前替换流水号的类型值。<br/>返回值：【第一阶段】“替换流水号值”的分类值；【第二阶段】当前分类下的最大流水号。类型：String"
+		}, {
+			"id" : "$.UID",
+			"text" : "$.UID 当前用户ID",
+			"decripHtml" : "$.UID<br/>当前用户ID"
+		}, {
+			"id" : "$.Data",
+			"text" : "$.Data 调用环境传入的自定义数据",
+			"decripHtml" : "$.Data<br/>调用环境传入的自定义数据，依据运行场景解释所传入的内容"
+		}, {
+			"id" : "$.F.getFieldDicText()",
+			"text" : "$.F.getFieldDicText() 获取字典项控件的显示值",
+			"decripHtml" : "$.F.getFieldDicText(String formDomainName)<br/>获取字典项控件的显示值，否则返回字段值。类型：String"
+		}, {
+			"id" : "$.F.setFieldValue()",
+			"text" : "$.F.setFieldValue() 为指定字段设置值",
+			"decripHtml" : "$.F.setFieldValue(String formDomainName, Object fieldValue, int sType)<br/>如果通过字段名匹配到多个字段，依具fieldValue值类型分三种处理：如果是基本类型（不包含id/value属性），则所有匹配字段设置相同的值；如果是自定义Object类型，再分为记录对象，形如：{JOB_A.SYS_MRID:'', JOB_A.F1:'', JOB_A$old.F2:'', JOB_B.F11:''}）或其数组，则匹配字段的记录mrid与此对象mrid相同的对象属性值赋给匹配字段，如果此时mrid未找到，或为空，则添加一条记录；如果是id/value的Object对象或其数组，则匹配字段的记录mrid与此对象id相同的对象属性值赋给匹配字段，如果此时mrid未找到，或为空，则添加一条记录。如果子表单内的某个字段也是子表单，赋值格式如下：{<br/>JOB_A.SYS_MRID:'',<br/>JOB_A.F1:'sadf',<br/>JOB_B.F11:[<br/>{JOB_SS.SYS_MRID:'',JOB_SS.FAA:'11',JOB_SS.FBB:'22'}]}。<br/>sType(可选)：要填充的批量子表单数据结构一致时，传入1可加快填充的速度，默认不传。"
+		}, {
+			"id" : "$.F.setFieldDicText()",
+			"text" : "$.F.setFieldDicText() 为指定字段设置对应的文本项",
+			"decripHtml" : "$.F.setFieldDicText(String formDomainName, Map filter)<br/>为指定字段设置对应的文本项，否则设置指定值。"
+		}, {
+			"id" : "$.F.findSubForm()",
+			"text" : "$.F.findSubForm() ",
+			"decripHtml" : "$.F.findSubForm(String formDomainName, Map filter)<br/>formDomainName，指定要查找内部记录的子表单控件的字段唯一名；filter，子表单内记录查找条件组（多个名值对以and组合），如：{JOB_SS.FAA:'11',JOB_SS.FBB:'22'}。暂不支持子表单内子表单数据的查找。返回找到的所有记录对象。返回类型：键值对数组"
+		}, {
+			"id" : "$.F.getSelectedSubForm()",
+			"text" : "$.F.getSelectedSubForm() ",
+			"decripHtml" : "$.F.getSelectedSubForm()<br/>ormDomainName，指定要查找内部记录的子表单控件的字段唯一名（支持@@前缀，指相对于当前打开子表单窗口）；bChecked，是否获取勾选的记录（如果为true，则获取勾先的记录，false，则获取当前高亮选中记录）。返回找到的所有记录对象。此方法仅适用于前端表达式。返回类型：键值对数组"
+		}, {
+			"id" : "$.W",
+			"text" : "$.W 工作流引擎",
+			"decripHtml" : "$.W<br/>工作流引擎。类型：对象"
+		}, {
+			"id" : "$.W.getTask(stepKey)",
+			"text" : "$.W.getTask() ",
+			"decripHtml" : "$.W.getTask(stepKey)<br/>获取当前流程指定环节的处理信息：传入“环节定义ID”，获取当前工作流的环节处理信息（包括：处理人，任务ID，环节名，办理时长等）。其中环节定义ID为空时，表示获取当前当前环节（任务）处理信息。"
+		}, {
+			"id" : "$.W.save()",
+			"text" : "$.W.save() 保存当前工作流及表单数据",
+			"decripHtml" : "$.W.save()<br/>保存当前工作流及表单数据"
+		}, {
+			"id" : "$.O",
+			"text" : "$.O 组织结构操作对象",
+			"decripHtml" : "$.O<br/>组织结构操作对象。类型：对象"
+		}, {
+			"id" : "$.O.getUserId()",
+			"text" : "$.O.getUserId() 获取登录用户ID",
+			"decripHtml" : "$.O.getUserId()<br/>获取登录用户ID。类型：字符串"
+		}, {
+			"id" : "$.O.getUserName()",
+			"text" : "$.O.getUserName() 获取登录用户名",
+			"decripHtml" : "$.O.getUserName()<br/>获取登录用户名。类型：字符串"
+		}, {
+			"id" : "$.O.getFullName(uid)",
+			"text" : "$.O.getFullName()",
+			"decripHtml" : "$.O.getFullName(uid)<br/>参数：uid，组织项ID。<br/>获取层次名的字符串：<br/>部门、岗位格式：XXX/YYY/ZZZ/*<br/>人员格式：XXX/YYY/ZZZ/NNN<br/>角色格式：[RRR]"
+		}, {
+			"id" : "$.O.getOrganInfo(uid)",
+			"text" : "$.O.getOrganInfo() 获取指定id的组织项对象",
+			"decripHtml" : "$.O.getOrganInfo(uid)<br/>获取指定id的组织项对象。类型：OrganInfoLocal"
+		}, {
+			"id" : "$.O.getOrganInfoByCode(code)",
+			"text" : "$.O.getOrganInfoByCode() 根据组织项的内部代码获取组织项对象",
+			"decripHtml" : "$.O.getOrganInfoByCode(code)<br/>根据组织项的内部代码获取组织项对象。类型：组织项对象"
+		}, {
+			"id" : "$.O.getOwnerDept(uid)",
+			"text" : "$.O.getOwnerDept() 获取直接部门",
+			"decripHtml" : "$.O.getOwnerDept(uid)<br/>获取直接部门，如果是人员，获取首要岗位的直接部门。类型：OrganInfoLocal"
+		}, {
+			"id" : "$.O.getOrganInfoByName(fullName)",
+			"text" : "$.O.getOrganInfoByName() 根据组织项的层次名获取组织项对象",
+			"decripHtml" : "$.O.getOrganInfoByName(fullName)<br/>根据组织项的层次名获取组织项对象（从上向下找，如果层次中的名称找不到组织项，将返回空）<br/>如：$.O.getOrganInfoByName(‘南方数码/研发中心/研发部/经理/’) 获取的是部门或岗位、<br/>$.O.getOrganInfoByName('[经理]') 获取的是角色、<br/>$.O.getOrganInfoByName('南方数码/研发中心/研发部/工程师/张三') 获取的是人员"
+		}, {
+			"id" : "$.O.getFirstPost(uid)",
+			"text" : "$.O.getFirstPost() 获取首要岗位",
+			"decripHtml" : "$.O.getFirstPost(uid)<br/>获取首要岗位，如果不是人员ID，返回空。类型：OrganInfoLocal"
+		}, {
+			"id" : "$.O.getAllPost(uid)",
+			"text" : "$.O.getAllPost() 获取所有岗位",
+			"decripHtml" : "$.O.getAllPost(uid)<br/>获取所有岗位，如果不是人员ID，返回长度为0的数组。类型：OrganInfoLocal []。"
+		}, {
+			"id" : "$.O.isRole(uid,roleName)",
+			"text" : "$.O.isRole() 是否属于指定角色",
+			"decripHtml" : "$.O.isRole(uid,roleName)<br/>是否属于指定角色。uid，判断的组织项ID；roleName角色名。类型：boolean"
+		}, {
+			"id" : "$.O.isInclude(uid,puids)",
+			"text" : "$.O.isInclude() 是否包含在指定的组织项或下级中",
+			"decripHtml" : "$.O.isInclude(uid,puids)<br/>是否包含在指定的组织项或下级中。uid，判断的组织项ID；puids，包含组织项列表字符串（以,分隔）。类型：boolean"
+		}, {
+			"id" : "$.O.getAllUser(uids)",
+			"text" : "$.O.getAllUser() 获取指定组织项下包含的所有用户项",
+			"decripHtml" : "$.O.getAllUser(uids)<br/>获取指定组织项下包含的所有用户项。uids，需要展开的组织项列表字符串（以,分隔）。类型：组织项对象数组"
+		}, {
+			"id" : "$.X(administratorCode)",
+			"text" : "$.X() 获取行政区划信息",
+			"decripHtml" : "$.X(administratorCode)<br/>获取行政区划信息。类型：AdministrativeDivision[]。<br/>参数：<br/>administratorCode【必须】：字符串，行政区划代码<br/>返回值：<br/>一个行政区划AdministrativeDivision的数组，第一项为省，第二项为市、第三项为县、第四项为乡、第五项为村、第六项为组、第七项为小组直到administratorCode指定的行政区划级别（最多7项）"
+		}, {
+			"id" : "$.C(catalogCode, showValue)",
+			"text" : "$.C() 获取字典项信息",
+			"decripHtml" : "$.C(catalogCode, showValue)<br/>获取字典项信息。类型：CodeDict[]<br/>参数<br/>catalogCode【必须】：代码字典的分类码或显示文本，<br/>showValue【必须】：字典项代码或显示文本。<br/>返回值：字典对象数组。如果未找到，返回长度为0的数组。类型：CodeDict[]"
+		}, {
+			"id" : "$.S(catalog,key)",
+			"text" : "$.S() 获得指定分类的系统配置项内容",
+			"decripHtml" : "$.S(catalog,key)<br/>获得指定分类的系统配置项内容。<br/>catalog【必须】，分类名<br/>key【必须】，配置项。<br/>返回：配置值(如果未获取到，返回空。<br/>此方法先用本系统ID关联的配置查找，如果找不到，再忽略系统ID查找（即找到任何一个同分类同名的配置）。<br/>如：<br/>$.S('单位信息','所属行政区')。类型：字符串"
+		}, {
+			"id" : "$.execsql (dsName,sql1,param1,sql2,param2,sql3,param3)",
+			"text" : "$.execsql() ",
+			"decripHtml" : "$.execsql(dsName,sql1,param1,sql2,param2,sql3,param3)<br/>条件执行sql语句：先执行sql1，成功且有返回值则执行sql2，否则(不出异常时)执行sql3。<br/>dsName:数据源查询服务配置名，用于支持多数据源的查询（暂未使用）<br/>sql1【必须】:语句命名（为了安全，不直接写sql语句，而是由单独模块定义sql并命名，通过命名找到sql语句内容）<br/>param1:所执行语句的参数名值对的Map对象。依据命名所对应的sql语句中的参数定义方式，支持占位符参数 如：{'?1':'#date#','?2':1,'?3':'1-23-4'}，及与命名参数 如：<br/> {'regdate':'#date#','mj':1,'rid':'1-23-4'}<br/>sql2/param2、sql3/param3：说明同上。<br/>返回每条sql语句的执行结果名值对的Map对象。key名分别为“sql1”，“sql2”，“sql3”，值为对应sql语句的结果：<br/>如果是select语句，返回List<Map<String,Object>>格式的记录集（Map指一条记录结果，Key为字段名，Value为字段值）；<br/>如果是insert、update、delete语句，返回影响的记录数。<br/>若对应某条语句未执行，相应结果为null。"
+		}, {
+			"id" : "$.execproc(dsName,procName,inParam,outParam)",
+			"text" : "$.execproc() 执行存贮过程",
+			"decripHtml" : "$.execproc(dsName,procName,inParam,outParam)<br/>执行存贮过程。<br/>dsName:数据源查询服务配置名，用于支持多数据源的查询（暂未使用）<br/>procName【必须】：存贮过程名<br/>inParam：输入参数，名值对的Map对象（但只支持命名参数的写法，不支持占位符参数）<br/>outParam：输出参数，名值对的Map对象（也只支持命名参数的写法），每项参数的值为返回结果类型的描述字符串。如：{'no':'int'}<br/> varchar（字符串）、clob（大文本内容）：将返回字符串值；<br/> int（整数）：将返回整数值；<br/> double（浮点小数）、decimal（定点小数）：将返回小数值；<br/> datetime（日期）：将返回日期值（时间戳）；<br/> blob（大二进制块）：将返回base64编码的二进制值；<br/> cursor（游标，只能一个）：将返回List<Map<String,Object>>格式的记录集（Map指一条记录结果，Key为字段名，Value为字段值）。<br/>注：为了兼容不同数据库存贮过程返回记录集的方式不同（Oracle通过输出参数返回，mysql/sqlserver通过查询语句返回），应统一按输出参数的方式调用（内部会正确处理通过查询语句返回的情况）。<br/>返回存贮过程的输出参数名值对Map对象（Key为参数名）"
+		}, {
+			"id" : "$.batchsql(dsName,arrSqlInfo)",
+			"text" : "$.batchsql() 执行批量查询",
+			"decripHtml" : "$.batchsql(dsName,arrSqlInfo)<br/>执行批量查询<br/>dsName:数据源查询服务配置名，用于支持多数据源的查询（暂未使用）<br/>arrSqlInfo【必须】：查询信息数组，每个元素是SqlInfo对象：{sql:语句命名,param:[参数名值对的Map对象列表]} （参见execsql相应参数说明）<br/>返回每条sql语句返回的记录集数组：List<List<记录集>>。<br/>  其中第一层数组元素是各条sql语句的返回值数组（与传入的sql语句顺序对应）；<br/>  第二层数组元素是每条sql语句内不同组参数的返回的记录集结果（与param参数顺序对应，但一般只有一组参数）<br/>  记录集返回List<Map<String,Object>>（Map指一条记录结果，Key为字段名，Value为字段值）"
+		}, {
+			"id" : "$.batchcud(dsName,arrSqlInfo)",
+			"text" : "$.batchcud() 执行批量更新",
+			"decripHtml" : "$.batchcud(dsName,arrSqlInfo)<br/>dsName:数据源查询服务配置名，用于支持多数据源的查询（暂未使用）<br/>arrSqlInfo【必须】：查询信息数组，每个元素是SqlInfo对象（参见batchsql相应参数说明）<br/>返回每条sql语句返回的受影响记录数：List<int[]>。<br/>  其中第一层数组元素是各条sql语句的返回值数组（与传入的sql语句顺序对应）；<br/>  第二层数组元素是每条sql语句内不同组参数的返回结果（与param参数顺序对应，每一项的值表示此参数下执行导致的影响记录数）"
+		} ]
+
+	}, {
+		"id" : "string",
+        "text" : "字符串对象",
+        "domType": "root",
+		"children" : [ {
+			"id" : "substr()",
+            "text" : "substr(intStart,[intLen]) 截取字符串，长度可省略（表示获取到结尾）",
+            "decripHtml" : "substr(start,end)<br/>start所需的子字符串的起始位置。字符串中的第一个字符的索引为0;end所需的子字符串的最后位置。例如，例如：var str = 'ABCDEF' str.substr(2,4); 结果：CDEF "
+		}, {
+			"id" : "indexOf()",
+            "text" : "indexOf(strFind)(返回String对象内首次出现子字符串位置)",
+            "decripHtml" : "indexOf()<br/>例如：var str = 'ABCDECDF' str.indexOf('CD'，1); 由1位置从左向右查找,结果：2 "
+		}, {
+			"id" : "lastIndexOf()",
+            "text" : "lastIndexOf(strFind)(返回String对象内字符串最后出现的位置)",
+            "decripHtml" : "lastIndexOf()<br/>该方法返回String对象中字符串最后出现的位置。如果没有匹配到子字符串，则返回-1。var str = 'ABCDECDF' str.lastIndexOf('CD',6);结果：5"
+		}, {
+			"id" : "split()",
+            "text" : "split()(将字符串根据某符号转为数组)",
+            "decripHtml" : "split()<br/>例如： var str = 'AA BB CC DD EE FF' alert(str.split(' '，3)); 结果： AA,BB,CC"
+		}, {
+			"id" : "toLowerCase()",
+            "text" : "toLowerCase()(将字符串中的字母转换成小写)",
+            "decripHtml" : "toLowerCase()<br/>例如： var str = 'ABCabc' str.toLowerCase(); 结果：abcabc "
+		}, {
+			"id" : "toUpperCase()",
+            "text" : "toUpperCase()(将字符串中的字母转换成大写)",
+            "decripHtml" : "toUpperCase()<br/>例如： var str = 'ABCabc' str.toUpperCase(); 结果：ABCABC"
+		} ]
+
+	}, {
+		"id" : "otherObj",
+        "text" : "其他对象",
+        "domType": "root",
+		"children" : [ {
+			"id" : "true",
+            "text" : "true(条件真)",
+            "decripHtml" : "true<br/> 一般只用于赋值。如：isMan=true"
+		}, {
+			"id" : "false",
+            "text" : "false(条件假)",
+            "decripHtml" : "false<br/> 一般只用于赋值。如：isMan=false"
+		}, {
+			"id" : "null",
+            "text" : "null(对象为空)",
+            "decripHtml" : "null<br/>一般用于赋值或判断否为空。如：myObject=null;myNewObj!=null"
+		}, {
+			"id" : ".",
+            "text" : ".(调用对象成员)",
+            "decripHtml" : ".<br/>半角点号。与小数点一致，用于调用一个对象的成员方法或属性。如：DateTime.Now、'abc'.IndexOf('a')结果等于：此时的日期、0"
+		}, {
+			"id" : "[]",
+            "text" : "[...](取列表元素值)",
+            "decripHtml" : "[...]<br/>半角中括号。取数组、列表或字典元素值，数组、列表或字典无法直接创建，只能通过参数传入或由其它对象处理返回得到。如：myChar='abc'.ToCharArray();myChar[0]、myList[myList.Count-1]、myDic['123']"
+		} ]
+
+	} ]
+},{
+	"id" : "systemId",
+    "text" : "系统配置",
+    "domType": "root",
+	"state" : "closed",
+	"children" :[{
+		"id" : "adminiId",
+		"text" : "行政区划",
+		"decripHtml" : "行政区划<br/>对应标识：adminiId"
+	}, {
+		"id" : "codeDicId",
+		"text" : "代码字典",
+		"decripHtml" : "代码字典<br/>对应标识：codeDicId"
+	}]
+},{
+	"id" : "customId",
+    "text" : "自定义",
+    "domType": "root",
+	"state" : "closed",
+	"children" :[{
+		"id" : "customId1",
+		"text" : "自定义1",
+		"decripHtml" : "自定义1<br/>对应标识：customId1。id是自定义表达式值"
+	}]
+} ]
